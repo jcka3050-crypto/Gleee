@@ -56,7 +56,7 @@ You get: `https://USERNAME.github.io/Glee`
 ## 🔗 Connect Frontend to Backend
 
 ### Update API URL in config
-Edit `scripts/config.js`:
+Edit `src/js/config.js`:
 
 ```javascript
 // For Replit backend

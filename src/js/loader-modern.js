@@ -2,9 +2,9 @@
 (function() {
   // Preload critical resources
   const preloadLinks = [
-    { href: 'styles/style.css', as: 'style' },
+    { href: '../styles/style.css', as: 'style' },
     { href: 'https://fonts.googleapis.com', as: 'fetch', crossorigin: true },
-    { href: 'scripts/index.js', as: 'script' }
+    { href: '../js/index.js', as: 'script' }
   ];
 
   preloadLinks.forEach(link => {
@@ -33,7 +33,9 @@
   // Load shared components
   async function loadComponent(path, targetId) {
     try {
-      const response = await fetch(path);
+      // Ensure path is correct for components folder
+      const componentPath = path.startsWith('../') ? path : '../components/' + path.replace(/.*\//, '');
+      const response = await fetch(componentPath);
       if (response.ok) {
         document.getElementById(targetId).innerHTML = await response.text();
       }
@@ -44,14 +46,14 @@
 
   // Load all components in parallel
   Promise.all([
-    loadComponent('shared/header.html', 'site-header'),
-    loadComponent('shared/modal.html', 'site-modal'),
-    loadComponent('shared/footer.html', 'site-footer')
+    loadComponent('components/header.html', 'site-header'),
+    loadComponent('components/modal.html', 'site-modal'),
+    loadComponent('components/footer.html', 'site-footer')
   ]).then(() => {
     // Load main app script as ES module
     const script = document.createElement('script');
     script.type = 'module';
-    script.src = 'scripts/index.js';
+    script.src = '../js/index.js';
     script.defer = true;
     document.body.appendChild(script);
   }).catch(error => {
@@ -59,7 +61,7 @@
     // Fallback: still load the script
     const script = document.createElement('script');
     script.type = 'module';
-    script.src = 'scripts/index.js';
+    script.src = '../js/index.js';
     script.defer = true;
     document.body.appendChild(script);
   });

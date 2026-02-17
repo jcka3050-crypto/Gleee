@@ -6,6 +6,7 @@ import { initNavigation, initMobileOptimizations, initFAQ } from './modules/navi
 import { initOrderForm } from './modules/orders.js';
 import { loadReviews, initReviewForm } from './modules/reviews.js';
 import { registerServiceWorker } from './pwa.js';
+import { renderHomePage } from './homepage.js';
 
 // Async initialization
 async function initApp() {
@@ -30,6 +31,12 @@ async function initApp() {
     if (!initGuards.navigation) {
       initNavigation();
       initGuards.navigation = true;
+    }
+
+    // Render homepage if on home page
+    if (document.querySelector('section#home') && !initGuards.homepage) {
+      renderHomePage();
+      initGuards.homepage = true;
     }
 
     // Initialize page-specific features

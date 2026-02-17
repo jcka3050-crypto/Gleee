@@ -46,7 +46,7 @@ Get: https://USERNAME.github.io/Glee
 ### 3️⃣ Connect Them (1 min)
 
 ```
-Edit: scripts/config.js
+Edit: src/js/config.js
 Change: API_BASE = 'https://Glee-YOUR-NAME.replit.dev/api'
 Push: git push origin main
 ```
@@ -69,9 +69,9 @@ Glee/
 │
 ├── 🎨 Styling & UI
 │   ├── styles/style.css (Main styles)
-│   ├── shared/header.html (Header)
-│   ├── shared/footer.html (Footer)
-│   └── shared/modal.html (Success modal)
+│   ├── components/header.html (Header)
+│   ├── components/footer.html (Footer)
+│   └── components/modal.html (Success modal)
 │
 ├── ⚙️ Backend API
 │   ├── server/index.js (Node.js server)
@@ -87,9 +87,8 @@ Glee/
 │
 ├── 📚 Documentation
 │   ├── README.md (Project overview)
-│   ├── SETUP.md (Quick setup)
 │   ├── DEPLOYMENT.md (Full deployment)
-│   └── REPLIT_FULLSTACK.md (Backend details)
+│   └── FRONTEND_FLOW.md (Frontend details)
 │
 └── 📦 Assets
     ├── logo.svg
@@ -137,9 +136,10 @@ npm run replit        # Replit deployment (automatic)
 
 | File | Purpose |
 |------|---------|
-| **[SETUP.md](SETUP.md)** | ⚡ Quick 8-minute setup |
 | **[DEPLOYMENT.md](DEPLOYMENT.md)** | 📖 Full deployment guide |
-| **[REPLIT_FULLSTACK.md](REPLIT_FULLSTACK.md)** | 🔧 Backend details |
+| **[FRONTEND_FLOW.md](FRONTEND_FLOW.md)** | 🎨 Frontend architecture |
+| **[BACKEND.md](BACKEND.md)** | 🔧 Backend improvements |
+| **[DATABASE.md](DATABASE.md)** | 💾 Database guide |
 | **[README.md](README.md)** | 📋 Project overview |
 
 ---
@@ -183,10 +183,9 @@ Once deployed:
 
 **Next Steps:**
 
-1. Read [SETUP.md](SETUP.md) (2 min)
-2. Follow [DEPLOYMENT.md](DEPLOYMENT.md) (10 min)
-3. Test your live app
-4. Share with friends! 🎉
+1. Read [DEPLOYMENT.md](DEPLOYMENT.md) - Full deployment guide (10 min)
+2. Test your live app  
+3. Share with friends! 🎉
 
 ---
 
@@ -222,8 +221,8 @@ curl https://Glee-YOUR-NAME.replit.dev/api/orders
 ## 🆘 Need Help?
 
 1. **Deployment issues?** → See [DEPLOYMENT.md](DEPLOYMENT.md)
-2. **Backend questions?** → See [REPLIT_FULLSTACK.md](REPLIT_FULLSTACK.md)
-3. **Quick setup?** → See [SETUP.md](SETUP.md)
+2. **Frontend questions?** → See [FRONTEND_FLOW.md](FRONTEND_FLOW.md)
+3. **Backend questions?** → See [BACKEND.md](BACKEND.md)
 
 ---
 

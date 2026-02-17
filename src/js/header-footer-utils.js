@@ -211,7 +211,7 @@ window.copyToClipboard = function(elementId) {
 export async function loadHeaderFooterModal() {
     try {
         // Load header
-        const headerResponse = await fetch('shared/header.html');
+        const headerResponse = await fetch('../components/header.html');
         const headerHTML = await headerResponse.text();
         const headerContainer = document.getElementById('site-header');
         if (headerContainer) {
@@ -219,7 +219,7 @@ export async function loadHeaderFooterModal() {
         }
 
         // Load footer
-        const footerResponse = await fetch('shared/footer.html');
+        const footerResponse = await fetch('../components/footer.html');
         const footerHTML = await footerResponse.text();
         const footerContainer = document.getElementById('site-footer');
         if (footerContainer) {
@@ -227,7 +227,7 @@ export async function loadHeaderFooterModal() {
         }
 
         // Load modal
-        const modalResponse = await fetch('shared/modal.html');
+        const modalResponse = await fetch('../components/modal.html');
         const modalHTML = await modalResponse.text();
         const modalContainer = document.getElementById('site-modal');
         if (modalContainer) {
